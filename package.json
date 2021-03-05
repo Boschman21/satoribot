@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
+    "discord-tictactoe": "^2.0.8",
+    "discord-welcome": "^2.0.2",
     "discord.js": "^12.5.1",
     "discord.js-pagination": "^1.0.3",
     "fs": "0.0.1-security",

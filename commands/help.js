@@ -19,8 +19,8 @@ module.exports = {
 				{ name: '!me', value: 'Paar Infos über dich' },
 				{ name: '\u200b', value: '\u200b' },
 			)
-			.setTimestamp()
-			.setFooter(`Satoribot by Boschman21 \nRequested by ${message.author.username} `);
+			.setFooter(`Satoribot by Boschman21 \nRequested by ${message.author.username} `)
+			.setTimestamp();
 
 			const help2 = new Discord.MessageEmbed()
 			.setColor('#33FF80')
@@ -35,8 +35,8 @@ module.exports = {
 
 				{ name: '\u200b', value: '\u200b' },
 			)
-			.setTimestamp()
-			.setFooter(`Satoribot by Boschman21 \nRequested by ${message.author.username} `);
+			.setFooter(`Satoribot by Boschman21 \nRequested by ${message.author.username} `)
+			.setTimestamp();
 
 			const pages = [
 				help1,

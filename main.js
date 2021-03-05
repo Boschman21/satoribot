@@ -1,6 +1,8 @@
 const { Client, MessageEmbed, Collection } = require('discord.js');
+const TicTacToe = require('discord-tictactoe');
 const { readdirSync } = require("fs");
 const { join } = require("path");
+const Welcome = require("discord-welcome");
 const { TOKEN, PREFIX } = require("./config.json");
 
 const client = new Client({ disableMentions: "everyone" });
@@ -14,6 +16,17 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 client.on("error", console.error);
 
+
+new TicTacToe({
+  language: 'de',
+  command: '!ttt'
+}, client);
+
+Welcome(client, {
+    privatemsg : "Willkommen auf dem Satori-Server. Lies dir gerne die Regeln durch und schau dich um! ",
+    publicmsg : "Moin @MEMBER. Willkommen auf Satori!",
+    publicchannel : "810985214582063137"
+});
 const commandFiles = readdirSync(join(__dirname, "commands")).filter((file) => file.endsWith(".js"));
 for (const file of commandFiles) {
   const command = require(join(__dirname, "commands", `${file}`));

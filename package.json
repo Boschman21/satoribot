@@ -4,9 +4,7 @@
   "description": "Privater Bot von Satori",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-  
-    "start": "node --experimental-modules index.mjs "
+    "test": "echo \"Error: no test specified\" && exit 1"
   
   },
   "keywords": [],

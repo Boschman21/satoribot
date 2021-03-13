@@ -22,7 +22,7 @@ const game = new TicTacToe({
 });
 
 client.on('message', message => {
-  if (message.content === "!ttt") {
+  if (message.content.startsWith("!ttt")) {
 	if (message.channel.type === 'dm') return;
     if (message.channel.id === '812395277247840326') {
       // all the magic is here, you just have to call the method with the message object
@@ -40,7 +40,7 @@ client.on('message', message => {
 Welcome(client, {
     privatemsg : "Willkommen auf dem Satori-Server. Lies dir gerne die Regeln durch und schau dich um! ",
     publicmsg : "Moin @MEMBER. Willkommen auf Satori!",
-    publicchannel : "810985214582063137"
+    publicchannel : "703581509868584971"
 });
 const commandFiles = readdirSync(join(__dirname, "commands")).filter((file) => file.endsWith(".js"));
 for (const file of commandFiles) {

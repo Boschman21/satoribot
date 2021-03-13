@@ -40,7 +40,7 @@ client.on('message', message => {
 Welcome(client, {
     privatemsg : "Willkommen auf dem Satori-Server. Lies dir gerne die Regeln durch und schau dich um! ",
     publicmsg : "Moin @MEMBER. Willkommen auf Satori!",
-    publicchannel : "703581509868584971"
+    publicchannel : "812393215306629140"
 });
 const commandFiles = readdirSync(join(__dirname, "commands")).filter((file) => file.endsWith(".js"));
 for (const file of commandFiles) {

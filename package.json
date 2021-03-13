@@ -5,14 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  
   },
   "keywords": [],
   "author": "Boschman21",
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
-    "discord-tictactoe": "^2.0.8",
+    "discord-tictactoe": "^2.1.0",
     "discord-welcome": "^2.0.2",
     "discord.js": "^12.5.1",
     "discord.js-pagination": "^1.0.3",

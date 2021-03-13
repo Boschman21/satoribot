@@ -1,5 +1,4 @@
 const { Client, MessageEmbed, Collection } = require('discord.js');
-const TicTacToe = require('discord-tictactoe');
 const { readdirSync } = require("fs");
 const { join } = require("path");
 const Welcome = require("discord-welcome");
@@ -16,11 +15,27 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 client.on("error", console.error);
 
-
-new TicTacToe({
+const TicTacToe = require('discord-tictactoe');
+const game = new TicTacToe({
   language: 'de',
-  command: '!ttt'
-}, client);
+  // command: '!ttt': you can remove that config key as your are using a custom handler
+});
+
+client.on('message', message => {
+  if (message.content === "!ttt") {
+	if (message.channel.type === 'dm') return;
+    if (message.channel.id === '812395277247840326') {
+      // all the magic is here, you just have to call the method with the message object
+      game.handleMessage(message);
+    } else {
+      message.react('⚠️')
+      message.reply('Falscher Channel --> <#812395277247840326>')
+        .then(message => {
+          setTimeout(() => message.delete(), 10000)
+        })
+    }
+  }
+});
 
 Welcome(client, {
     privatemsg : "Willkommen auf dem Satori-Server. Lies dir gerne die Regeln durch und schau dich um! ",

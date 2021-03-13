@@ -5,6 +5,14 @@ module.exports = {
     description: "pb",
 
     async run (client, message) {
+        if(message.channel.id !== '812394571107401799'){  
+            message.react('⚠️')
+            message.reply('Falscher Channel --> <#812394571107401799>')
+            .then(message => {
+                setTimeout(() => message.delete(), 10000)
+            })
+            return;
+        }
         const avatar = new Discord.MessageEmbed()
         .setColor('#33FF80')
         .setTitle(`PB von ${message.author.username}`)

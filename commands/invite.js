@@ -6,6 +6,11 @@ module.exports = {
 
     async run (client, message) {
 
-    message.channel.send('https://discord.gg/PgqB25Q6C2');
+        message.react('✅')
+        message.channel.send('https://discord.gg/PgqB25Q6C2')
+        .then(message => {
+            setTimeout(() => message.delete(), 300000)
+        })
+        return;
     }
 }

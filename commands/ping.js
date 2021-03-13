@@ -10,7 +10,11 @@ module.exports = {
         .setColor("#33FF80")
         .setDescription(`Pong!\`${client.ws.ping}\`ms`);
 
-
-        message.channel.send(ping);
+        message.react('✅')
+        message.channel.send(ping)
+        .then(message => {
+            setTimeout(() => message.delete(), 300000)
+        })
+        return;
     }
 }

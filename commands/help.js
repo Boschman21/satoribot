@@ -6,6 +6,14 @@ module.exports = {
     description: "helpmenu",
 
     async run (client, message) {
+		if(message.channel.id !== '812394571107401799'){  
+            message.react('⚠️')
+            message.reply('Falscher Channel --> <#812394571107401799>')
+            .then(message => {
+                setTimeout(() => message.delete(), 10000)
+            })
+            return;
+		}
         const help1 = new Discord.MessageEmbed()
 			.setColor('#33FF80')
 			.setTitle('Satoribot')
@@ -19,7 +27,6 @@ module.exports = {
 				{ name: '!me', value: 'Paar Infos über dich' },
 				{ name: '\u200b', value: '\u200b' },
 			)
-			.setFooter(`Satoribot by Boschman21 \nRequested by ${message.author.username} `)
 			.setTimestamp();
 
 			const help2 = new Discord.MessageEmbed()
@@ -29,13 +36,14 @@ module.exports = {
 			.setDescription('Hier eine Liste aller Commands:')
 			.setThumbnail('https://i.imgur.com/MgaxZYH.png')
 			.addFields(
-				{ name: '!join', value: 'Gegen Einsamkeit' },
-				{ name: '!leave', value: 'Das Gegenteil wie join' },
+				{ name: '!ttt', value: 'Tic Tac Toe' },
+				{ name: '!join', value: 'Ich hab keine Freunde' },
+				{ name: '!leave', value: 'Das Gegenteil von join' },
+				{ name: '!credits', value: 'Credits...' },
 				{ name: 'more coming soon...', value: '\u200b' },
 
 				{ name: '\u200b', value: '\u200b' },
 			)
-			.setFooter(`Satoribot by Boschman21 \nRequested by ${message.author.username} `)
 			.setTimestamp();
 
 			const pages = [
@@ -50,4 +58,3 @@ module.exports = {
 			pagination(message, pages, emojiList, timeout)
             }
         }
-        

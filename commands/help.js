@@ -22,6 +22,7 @@ module.exports = {
 			.setThumbnail('https://i.imgur.com/MgaxZYH.png')
 			.addFields(
 				{ name: '!help', value: 'Hilfemenü' },
+				{ name: '!ping', value: 'Pingt den Bot' },
 				{ name: '!invite', value: 'Lade andere User ein' },
 				{ name: '!avatar', value: 'Rufe dein PB ab' },
 				{ name: '!me', value: 'Paar Infos über dich' },

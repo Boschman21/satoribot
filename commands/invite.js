@@ -7,7 +7,7 @@ module.exports = {
     async run (client, message) {
 
         message.react('✅')
-        message.channel.send('https://discord.gg/PgqB25Q6C2')
+        message.channel.send('https://discord.gg/x9turEuSvS')
         .then(message => {
         })
         return;

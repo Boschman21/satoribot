@@ -20,9 +20,6 @@ module.exports = {
 
         message.react('✅')
         message.channel.send(ping)
-        .then(message => {
-            setTimeout(() => message.delete(), 300000)
-        })
         return;
     }
 }

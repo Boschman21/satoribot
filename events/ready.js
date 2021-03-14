@@ -11,7 +11,7 @@ module.exports = client => {
         'Sapphire und Printstream',
         'Davids Ehre nach',
         'sich deinen Browserverlauf an',
-        'https://discord.gg/PgqB25Q6C2',
+        'https://discord.gg/x9turEuSvS',
         'Mitten im Leben',
         `${client.ws.ping}ms`,
         'twitch.tv/trymacs',

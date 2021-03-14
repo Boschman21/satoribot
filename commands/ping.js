@@ -10,6 +10,7 @@ module.exports = {
             message.react('⚠️')
             message.reply('Falscher Channel --> <#812394571107401799>')
             .then(message => {
+                setTimeout(() => message.delete(), 10000)
             })
             return;
         }

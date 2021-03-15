@@ -5,7 +5,7 @@ module.exports = {
     description: "pb",
 
     async run (client, message) {
-        if(message.channel.id !== '812394571107401799'){  
+        if(message.channel.id !== '821070219605835806'){  
             message.react('⚠️')
             message.reply('Falscher Channel --> <#812394571107401799>')
             .then(message => {
@@ -13,10 +13,12 @@ module.exports = {
             })
             return;
         }
+        const user = message.mentions.users.first() || message.author;
         const avatar = new Discord.MessageEmbed()
         .setColor('#33FF80')
-        .setTitle(`PB von ${message.author.username}`)
-        .setImage('https://cdn.discordapp.com/avatars/' + message.author.id + '/' + message.author.avatar + '.png ')
+        .setTitle(`PB von ${user.username}`)
+        .setImage(user.displayAvatarURL({dynamic : true}))
+        //.setImage('https://cdn.discordapp.com/avatars/' + user.id + '/' + user.avatar + '.png ')
         .setTimestamp()
         .setFooter(`Requested by ${message.author.username}`);
     message.channel.send(avatar);

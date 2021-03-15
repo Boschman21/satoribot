@@ -5,7 +5,7 @@ module.exports = {
     description: "pb",
 
     async run (client, message) {
-        if(message.channel.id !== '821070219605835806'){  
+        if(message.channel.id !== '812394571107401799'){  
             message.react('⚠️')
             message.reply('Falscher Channel --> <#812394571107401799>')
             .then(message => {

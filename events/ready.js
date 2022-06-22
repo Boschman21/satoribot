@@ -3,14 +3,14 @@ const ping = require("../commands/ping");
 
 module.exports = client => { 
     console.log(`${client.user.username} ist online`)
-    client.user.setActivity('Brot', { type: 'PLAYING' });
+    client.user.setActivity('deiner Mutter im Bett', { type: 'LISTENING' });
 
 	const statuses = [
 		'!help !invite',
-		'Ben beim Coden zu',
-        'Sapphire und Printstream',
-        'Davids Ehre nach',
-        'sich deinen Browserverlauf an',
+		'VW Sharan Diesel',
+        'kruspig sehr gut',
+        'Big Floppa',
+        'No bitches?',
         'https://discord.gg/x9turEuSvS',
         'Mitten im Leben',
         `${client.ws.ping}ms`,
